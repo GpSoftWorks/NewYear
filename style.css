@@ -1,0 +1,182 @@
+/* Global styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-align: center;
+  overflow: hidden; /* Prevent scroll */
+}
+
+/* Background setup for Galaxy */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at bottom, #000011, #000022 50%, #000000 100%);
+  z-index: -1;
+}
+
+/* Stars animation */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#fff, rgba(255, 255, 255, 0.1));
+  background-size: 3px 3px;
+  opacity: 0.8;
+  animation: twinkling 50s linear infinite;
+}
+
+@keyframes twinkling {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* Planets */
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #5555ff, #2222aa);
+  box-shadow: 0 0 20px rgba(0, 0, 255, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.1);
+  animation: orbit 20s linear infinite;
+}
+
+.planet.one {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: 10%;
+  background: radial-gradient(circle, #ff9933, #cc6600);
+}
+
+.planet.two {
+  width: 70px;
+  height: 70px;
+  bottom: 15%;
+  right: 20%;
+  background: radial-gradient(circle, #99ccff, #3366cc);
+  animation: orbit 25s linear infinite reverse;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Earth */
+.earth {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #3c9dff 60%, #194e8c 90%);
+  box-shadow: 0 0 30px rgba(0, 150, 255, 0.7), inset 0 0 20px rgba(0, 50, 100, 0.5);
+  animation: rotateEarth 20s linear infinite;
+}
+
+@keyframes rotateEarth {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+/* Countdown container */
+.countdown-container {
+  position: absolute;
+  top: 20px; /* Positioning the countdown in the top corner */
+  right: 20px;
+  padding: 10px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4); /* Dark background for the countdown */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Countdown box styles */
+#countdown {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.time-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3); /* Match with universe background */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.time {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Footer styles */
+.footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.footer a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+#countdown {
+  font-size: 3rem;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+
+#countdown {
+  color: white;
+}
