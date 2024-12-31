@@ -110,6 +110,8 @@ body, html {
   background: rgba(0, 0, 0, 0.4); /* Dark background for the countdown */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  width: auto;
+  max-width: 100%; /* Ensures container doesn't overflow */
 }
 
 /* Title */
@@ -179,4 +181,51 @@ body, html {
 
 #countdown {
   color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .countdown-container {
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+
+  .time-box {
+    padding: 8px;
+  }
+
+  .time {
+    font-size: 2.5rem;
+  }
+
+  .label {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .countdown-container {
+    top: 10px;
+    right: 10px;
+    padding: 8px;
+    font-size: 1.2rem;
+  }
+
+  .time-box {
+    padding: 5px;
+  }
+
+  .time {
+    font-size: 2rem;
+  }
+
+  .label {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
 }
